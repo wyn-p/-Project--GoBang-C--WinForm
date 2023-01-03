@@ -25,6 +25,19 @@ namespace GoBang
         Point Cursor_Location = new Point(Cursor.Position.X, Cursor.Position.Y);
         int[] Point_in_Board = new int[2];
         float[] Board_Prop_Data = new float[3];
+        public static void Board_Intersec_Set()
+        {
+            void*** Intersection=new void***[15];
+            for(int i=0;i<15;i++)
+                Intersection[i]=new void**[15];
+            for(int i=0;i<15;i++)
+                for(int r=0;r<15;r++)
+                    Intersection[i,r]=new float*[3];
+            for(int i=0;i<15;i++)
+                for(int r=0;r<15;r++)
+                    for(int e=0;e<3;e++)
+                        *(Intersection[i,r]+e)=0;
+        }
         public Form_Game()
         {
             InitializeComponent();
@@ -52,13 +65,13 @@ namespace GoBang
             Board_H -= p / 2;
             Board = this.CreateGraphics();
             Board.Clear(Color.BurlyWood);
-            for (int i = 0; i < 15; i++)//Vertical
+            for (int i = 15; i >0; i--)//Vertical
             {
                 Board.DrawLine(pen, Board_W - r, Board_H, Board_W - r, 80 + p / 2);
                 r += p;
             }
             r = 0;
-            for (int i = 0; i < 15; i++)//Horizontal
+            for (int i = 15;i>0;i--)//Horizontal
             {
                 Board.DrawLine(pen, Board_W, Board_H - r, Board_W - Board_H + 80 + p / 2, Board_H - r);
                 r += p;
