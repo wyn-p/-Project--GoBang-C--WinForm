@@ -1,0 +1,12 @@
+C:\Users\admin\source\repos\GoBang\GoBang\bin\Debug\GoBang.exe.config
+C:\Users\admin\source\repos\GoBang\GoBang\bin\Debug\GoBang.exe
+C:\Users\admin\source\repos\GoBang\GoBang\bin\Debug\GoBang.pdb
+C:\Users\admin\source\repos\GoBang\GoBang\obj\Debug\GoBang.csproj.AssemblyReference.cache
+C:\Users\admin\source\repos\GoBang\GoBang\obj\Debug\GoBang.csproj.SuggestedBindingRedirects.cache
+C:\Users\admin\source\repos\GoBang\GoBang\obj\Debug\GoBang.Properties.Resources.resources
+C:\Users\admin\source\repos\GoBang\GoBang\obj\Debug\GoBang.csproj.GenerateResource.cache
+C:\Users\admin\source\repos\GoBang\GoBang\obj\Debug\GoBang.csproj.CoreCompileInputs.cache
+C:\Users\admin\source\repos\GoBang\GoBang\obj\Debug\GoBang.exe
+C:\Users\admin\source\repos\GoBang\GoBang\obj\Debug\GoBang.pdb
+C:\Users\admin\source\repos\GoBang\GoBang\obj\Debug\GoBang.Form_Game.resources
+C:\Users\admin\source\repos\GoBang\GoBang\obj\Debug\GoBang.Form_Start.resources
