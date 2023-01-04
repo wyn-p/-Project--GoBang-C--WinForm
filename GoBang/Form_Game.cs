@@ -25,19 +25,6 @@ namespace GoBang
         Point Cursor_Location = new Point(Cursor.Position.X, Cursor.Position.Y);
         int[] Point_in_Board = new int[2];
         float[] Board_Prop_Data = new float[3];
-        public static void Board_Intersec_Set()
-        {
-            void*** Intersection=new void***[15];
-            for(int i=0;i<15;i++)
-                Intersection[i]=new void**[15];
-            for(int i=0;i<15;i++)
-                for(int r=0;r<15;r++)
-                    Intersection[i,r]=new float*[3];
-            for(int i=0;i<15;i++)
-                for(int r=0;r<15;r++)
-                    for(int e=0;e<3;e++)
-                        *(Intersection[i,r]+e)=0;
-        }
         public Form_Game()
         {
             InitializeComponent();
@@ -45,7 +32,7 @@ namespace GoBang
 
         public static void WinnerPanel()
         {
-            DialogResult result = MessageBox.Show("Winner is: Player"+GameControl.CurrentPlayer.ToString(),"Congratulate!");
+            DialogResult result = MessageBox.Show("Winner is: Player" + GameControl.CurrentPlayer.ToString(), "Congratulate!");
             result = DialogResult.OK;
         }
 
@@ -65,13 +52,13 @@ namespace GoBang
             Board_H -= p / 2;
             Board = this.CreateGraphics();
             Board.Clear(Color.BurlyWood);
-            for (int i = 15; i >0; i--)//Vertical
+            for (int i = 15; i > 0; i--)//Vertical
             {
                 Board.DrawLine(pen, Board_W - r, Board_H, Board_W - r, 80 + p / 2);
                 r += p;
             }
             r = 0;
-            for (int i = 15;i>0;i--)//Horizontal
+            for (int i = 15; i > 0; i--)//Horizontal
             {
                 Board.DrawLine(pen, Board_W, Board_H - r, Board_W - Board_H + 80 + p / 2, Board_H - r);
                 r += p;
@@ -116,8 +103,8 @@ namespace GoBang
         }
         private void Point_to_Board(PointF point)
         {
-            Point_in_Board[0] = (int)(point.X / 51) - 12;
-            Point_in_Board[1] = (int)(point.Y / 51) - 2;
+            Point_in_Board[0] = (int)Math.Round(point.X / Board_Prop_Data[2], 0, MidpointRounding.AwayFromZero) - 12;
+            Point_in_Board[1] = (int)Math.Round(point.Y / Board_Prop_Data[2], 0, MidpointRounding.AwayFromZero) - 2;
             GameControl.BOARD[Point_in_Board[0], Point_in_Board[1]] = GameControl.CurrentPlayer;
         }
     }

@@ -10,3 +10,15 @@ C:\Users\admin\source\repos\GoBang\GoBang\obj\Debug\GoBang.exe
 C:\Users\admin\source\repos\GoBang\GoBang\obj\Debug\GoBang.pdb
 C:\Users\admin\source\repos\GoBang\GoBang\obj\Debug\GoBang.Form_Game.resources
 C:\Users\admin\source\repos\GoBang\GoBang\obj\Debug\GoBang.Form_Start.resources
+C:\Users\admin\Source\Repos\wyn-p\-Project--GoBang-C--WinForm\GoBang\bin\Debug\GoBang.exe.config
+C:\Users\admin\Source\Repos\wyn-p\-Project--GoBang-C--WinForm\GoBang\bin\Debug\GoBang.exe
+C:\Users\admin\Source\Repos\wyn-p\-Project--GoBang-C--WinForm\GoBang\bin\Debug\GoBang.pdb
+C:\Users\admin\Source\Repos\wyn-p\-Project--GoBang-C--WinForm\GoBang\obj\Debug\GoBang.csproj.AssemblyReference.cache
+C:\Users\admin\Source\Repos\wyn-p\-Project--GoBang-C--WinForm\GoBang\obj\Debug\GoBang.csproj.SuggestedBindingRedirects.cache
+C:\Users\admin\Source\Repos\wyn-p\-Project--GoBang-C--WinForm\GoBang\obj\Debug\GoBang.Form_Game.resources
+C:\Users\admin\Source\Repos\wyn-p\-Project--GoBang-C--WinForm\GoBang\obj\Debug\GoBang.Form_Start.resources
+C:\Users\admin\Source\Repos\wyn-p\-Project--GoBang-C--WinForm\GoBang\obj\Debug\GoBang.Properties.Resources.resources
+C:\Users\admin\Source\Repos\wyn-p\-Project--GoBang-C--WinForm\GoBang\obj\Debug\GoBang.csproj.GenerateResource.cache
+C:\Users\admin\Source\Repos\wyn-p\-Project--GoBang-C--WinForm\GoBang\obj\Debug\GoBang.csproj.CoreCompileInputs.cache
+C:\Users\admin\Source\Repos\wyn-p\-Project--GoBang-C--WinForm\GoBang\obj\Debug\GoBang.exe
+C:\Users\admin\Source\Repos\wyn-p\-Project--GoBang-C--WinForm\GoBang\obj\Debug\GoBang.pdb
