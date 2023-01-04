@@ -91,7 +91,7 @@ namespace GoBang
         private void Board_PutStone(int CurrentPlayer, PointF point, float p)
         {
             Board = this.CreateGraphics();
-            Board.FillEllipse(CurrentPlayer == 1 ? brush_Black : brush_White, point.X - p / 4, point.Y - p / 4, p / 2, p / 2);
+            Board.FillEllipse(CurrentPlayer == 1 ? brush_Black : brush_White, (float)Math.Round(point.X / Board_Prop_Data[2], 0, MidpointRounding.AwayFromZero) - p / 4, (float)Math.Round(point.Y / Board_Prop_Data[2], 0, MidpointRounding.AwayFromZero) - p / 4, p / 2, p / 2);
             Point_to_Board(point);
             GameControl.Check(Point_in_Board[0], Point_in_Board[1]);
         }
