@@ -28,29 +28,44 @@ namespace GoBang
             CheckFunc.Check_UpperLeft(CheckFunc.Check_CoD_X, CheckFunc.Check_CoD_Y);
             CheckFunc.Check_CoD_X = x; CheckFunc.Check_CoD_Y = y;
             CheckFunc.Check_BottomRight(CheckFunc.Check_CoD_X, CheckFunc.Check_CoD_Y);
-            if (MaxCount == 4) tempClass.WinnerPanel();
+            if (MaxCount == 4)
+            {
+                Form_Game.PutStoneEnable = false;
+                tempClass.WinnerPanel();
+            }
             MaxCount = 0;
 
             CheckFunc.Check_CoD_X = x; CheckFunc.Check_CoD_Y = y;
             CheckFunc.Check_Upper(CheckFunc.Check_CoD_X, CheckFunc.Check_CoD_Y);
             CheckFunc.Check_CoD_X = x; CheckFunc.Check_CoD_Y = y;
             CheckFunc.Check_Bottom(CheckFunc.Check_CoD_X, CheckFunc.Check_CoD_Y);
-            if (MaxCount == 4) tempClass.WinnerPanel();
+            if (MaxCount == 4)
+            {
+                Form_Game.PutStoneEnable = false;
+                tempClass.WinnerPanel();
+            }
             MaxCount = 0;
 
             CheckFunc.Check_CoD_X = x; CheckFunc.Check_CoD_Y = y;
             CheckFunc.Check_UpperRight(CheckFunc.Check_CoD_X, CheckFunc.Check_CoD_Y);
             CheckFunc.Check_CoD_X = x; CheckFunc.Check_CoD_Y = y;
             CheckFunc.Check_BottomLeft(CheckFunc.Check_CoD_X, CheckFunc.Check_CoD_Y);
-            if (MaxCount == 4) tempClass.WinnerPanel();
+            if (MaxCount == 4)
+            {
+                Form_Game.PutStoneEnable = false;
+                tempClass.WinnerPanel();
+            }
             MaxCount = 0;
-
 
             CheckFunc.Check_CoD_X = x; CheckFunc.Check_CoD_Y = y;
             CheckFunc.Check_Left(CheckFunc.Check_CoD_X, CheckFunc.Check_CoD_Y);
             CheckFunc.Check_CoD_X = x; CheckFunc.Check_CoD_Y = y;
             CheckFunc.Check_Right(CheckFunc.Check_CoD_X, CheckFunc.Check_CoD_Y);
-            if (MaxCount == 4) tempClass.WinnerPanel();
+            if (MaxCount == 4)
+            {
+                Form_Game.PutStoneEnable = false;
+                tempClass.WinnerPanel();
+            }
             MaxCount = 0;
         }
     }
