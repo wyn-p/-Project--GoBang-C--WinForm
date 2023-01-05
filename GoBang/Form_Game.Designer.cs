@@ -37,6 +37,7 @@ namespace GoBang
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.WarningMessage = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,7 +50,7 @@ namespace GoBang
             this.button1.TabIndex = 0;
             this.button1.Text = "重新開始";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.Game_Process_Restart);
+            this.button1.Click += new System.EventHandler(this.clickGame_Process_Restart);
             // 
             // fileSystemWatcher1
             // 
@@ -107,11 +108,21 @@ namespace GoBang
             this.label4.TabIndex = 7;
             this.label4.Text = "label4";
             // 
+            // WarningMessage
+            // 
+            this.WarningMessage.AutoSize = true;
+            this.WarningMessage.Location = new System.Drawing.Point(24, 704);
+            this.WarningMessage.Name = "WarningMessage";
+            this.WarningMessage.Size = new System.Drawing.Size(64, 24);
+            this.WarningMessage.TabIndex = 8;
+            this.WarningMessage.Text = "label3";
+            // 
             // Form_Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1795, 1251);
+            this.Controls.Add(this.WarningMessage);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -139,6 +150,7 @@ namespace GoBang
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label WarningMessage;
     }
 }
 

@@ -22,49 +22,36 @@ namespace GoBang
         }
         public static void Check(int x, int y)
         {
+            var tempClass = new Form_Game();
+
             CheckFunc.Check_CoD_X = x; CheckFunc.Check_CoD_Y = y;
             CheckFunc.Check_UpperLeft(CheckFunc.Check_CoD_X, CheckFunc.Check_CoD_Y);
-            if (MaxCount > 4) Form_Game.WinnerPanel();
-            else MaxCount = 0;
+            CheckFunc.Check_CoD_X = x; CheckFunc.Check_CoD_Y = y;
+            CheckFunc.Check_BottomRight(CheckFunc.Check_CoD_X, CheckFunc.Check_CoD_Y);
+            if (MaxCount == 4) tempClass.WinnerPanel();
+            MaxCount = 0;
 
             CheckFunc.Check_CoD_X = x; CheckFunc.Check_CoD_Y = y;
             CheckFunc.Check_Upper(CheckFunc.Check_CoD_X, CheckFunc.Check_CoD_Y);
-            if (MaxCount > 4) Form_Game.WinnerPanel();
-            else MaxCount = 0;
+            CheckFunc.Check_CoD_X = x; CheckFunc.Check_CoD_Y = y;
+            CheckFunc.Check_Bottom(CheckFunc.Check_CoD_X, CheckFunc.Check_CoD_Y);
+            if (MaxCount == 4) tempClass.WinnerPanel();
+            MaxCount = 0;
 
             CheckFunc.Check_CoD_X = x; CheckFunc.Check_CoD_Y = y;
             CheckFunc.Check_UpperRight(CheckFunc.Check_CoD_X, CheckFunc.Check_CoD_Y);
-            if (MaxCount > 4) Form_Game.WinnerPanel();
-            else MaxCount = 0;
+            CheckFunc.Check_CoD_X = x; CheckFunc.Check_CoD_Y = y;
+            CheckFunc.Check_BottomLeft(CheckFunc.Check_CoD_X, CheckFunc.Check_CoD_Y);
+            if (MaxCount == 4) tempClass.WinnerPanel();
+            MaxCount = 0;
 
 
             CheckFunc.Check_CoD_X = x; CheckFunc.Check_CoD_Y = y;
             CheckFunc.Check_Left(CheckFunc.Check_CoD_X, CheckFunc.Check_CoD_Y);
-            if (MaxCount > 4) Form_Game.WinnerPanel();
-            else MaxCount = 0;
-
-
             CheckFunc.Check_CoD_X = x; CheckFunc.Check_CoD_Y = y;
             CheckFunc.Check_Right(CheckFunc.Check_CoD_X, CheckFunc.Check_CoD_Y);
-            if (MaxCount > 4) Form_Game.WinnerPanel();
-            else MaxCount = 0;
-
-            CheckFunc.Check_CoD_X = x; CheckFunc.Check_CoD_Y = y;
-            CheckFunc.Check_BottomLeft(CheckFunc.Check_CoD_X, CheckFunc.Check_CoD_Y);
-            if (MaxCount > 4) Form_Game.WinnerPanel();
-            else MaxCount = 0;
-
-
-            CheckFunc.Check_CoD_X = x; CheckFunc.Check_CoD_Y = y;
-            CheckFunc.Check_Bottom(CheckFunc.Check_CoD_X, CheckFunc.Check_CoD_Y);
-            if (MaxCount > 4) Form_Game.WinnerPanel();
-            else MaxCount = 0;
-
-            CheckFunc.Check_CoD_X = x; CheckFunc.Check_CoD_Y = y;
-            CheckFunc.Check_BottomRight(CheckFunc.Check_CoD_X, CheckFunc.Check_CoD_Y);
-            if (MaxCount > 4) Form_Game.WinnerPanel();
-            else MaxCount = 0;
-
+            if (MaxCount == 4) tempClass.WinnerPanel();
+            MaxCount = 0;
         }
     }
     internal class CheckFunc
@@ -72,26 +59,26 @@ namespace GoBang
         public static int Check_CoD_X, Check_CoD_Y;
         public static void Check_UpperLeft(int x, int y)
         {
-            if (x - 1 > -1 && y - 1 > -1 && GameControl.BOARD[x, y] == GameControl.CurrentPlayer)
+            if (x - 1 > -1 && y - 1 > -1 && GameControl.BOARD[x - 1, y - 1] == GameControl.CurrentPlayer)
             {
                 Check_CoD_X--;
                 Check_CoD_Y--;
                 GameControl.MaxCount++;
-                Check_UpperLeft(Check_CoD_X,Check_CoD_Y);
+                Check_UpperLeft(Check_CoD_X, Check_CoD_Y);
             }
         }
         public static void Check_Upper(int x, int y)
         {
-            if (y - 1 > -1 && GameControl.BOARD[x, y] == GameControl.CurrentPlayer)
+            if (y - 1 > -1 && GameControl.BOARD[x, y - 1] == GameControl.CurrentPlayer)
             {
                 Check_CoD_Y--;
                 GameControl.MaxCount++;
-                Check_Upper(Check_CoD_X,Check_CoD_Y);
+                Check_Upper(Check_CoD_X, Check_CoD_Y);
             }
         }
         public static void Check_UpperRight(int x, int y)
         {
-            if (x + 1 < 15 && y - 1 > -1 && GameControl.BOARD[x, y] == GameControl.CurrentPlayer)
+            if (x + 1 < 15 && y - 1 > -1 && GameControl.BOARD[x + 1, y - 1] == GameControl.CurrentPlayer)
             {
                 Check_CoD_X++;
                 Check_CoD_Y--;
@@ -101,7 +88,7 @@ namespace GoBang
         }
         public static void Check_Left(int x, int y)
         {
-            if (x - 1 > -1 && GameControl.BOARD[x, y] == GameControl.CurrentPlayer)
+            if (x - 1 > -1 && GameControl.BOARD[x - 1, y] == GameControl.CurrentPlayer)
             {
                 Check_CoD_X--;
                 GameControl.MaxCount++;
@@ -110,7 +97,7 @@ namespace GoBang
         }
         public static void Check_Right(int x, int y)
         {
-            if (x + 1 < 15 && GameControl.BOARD[x, y] == GameControl.CurrentPlayer)
+            if (x + 1 < 15 && GameControl.BOARD[x + 1, y] == GameControl.CurrentPlayer)
             {
                 Check_CoD_X++;
                 GameControl.MaxCount++;
@@ -119,7 +106,7 @@ namespace GoBang
         }
         public static void Check_BottomLeft(int x, int y)
         {
-            if (x - 1 > -1 && y + 1 < 15 && GameControl.BOARD[x, y] == GameControl.CurrentPlayer)
+            if (x - 1 > -1 && y + 1 < 15 && GameControl.BOARD[x - 1, y + 1] == GameControl.CurrentPlayer)
             {
                 Check_CoD_X--;
                 Check_CoD_Y++;
@@ -129,7 +116,7 @@ namespace GoBang
         }
         public static void Check_Bottom(int x, int y)
         {
-            if (y + 1 < 15 && GameControl.BOARD[x, y] == GameControl.CurrentPlayer)
+            if (y + 1 < 15 && GameControl.BOARD[x, y + 1] == GameControl.CurrentPlayer)
             {
                 Check_CoD_Y++;
                 GameControl.MaxCount++;
@@ -138,12 +125,12 @@ namespace GoBang
         }
         public static void Check_BottomRight(int x, int y)
         {
-            if (x + 1 < 15 && y + 1 < 15 && GameControl.BOARD[x, y] == GameControl.CurrentPlayer)
+            if (x + 1 < 15 && y + 1 < 15 && GameControl.BOARD[x + 1, y + 1] == GameControl.CurrentPlayer)
             {
                 Check_CoD_X++;
                 Check_CoD_Y++;
                 GameControl.MaxCount++;
-                Check_BottomRight(Check_CoD_X,Check_CoD_Y);
+                Check_BottomRight(Check_CoD_X, Check_CoD_Y);
             }
         }
 
